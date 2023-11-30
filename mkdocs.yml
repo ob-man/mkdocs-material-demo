@@ -1,0 +1,63 @@
+site_name: MkDocs Material Demo
+site_url: https://ob-man.github.io/mkdocs-material-demo/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    #- toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: uk
+  palette:
+    # Перемикач палітри для світлого режиму
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Переключити на темний режим
+      # primary: teal
+      # accent: purple
+    # Перемикач палітри для темного режиму
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Переключити на світлий режим
+      # primary: teal
+      # accent: lime
+
+# plugins:
+#   - social
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/james-willett
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/TheJamesWillett
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/willettjames/
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/ob-man"  target="_blank" rel="noopener">ob-man</a>
