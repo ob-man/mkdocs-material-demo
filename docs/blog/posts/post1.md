@@ -6,7 +6,7 @@ slug: post1
 description: >
   Це перший пост у блозі
 categories:
-  - Загальна
+  - General
 ---
 
 # Перший пост у блозі
