@@ -30,8 +30,12 @@ theme:
       # primary: teal
       # accent: lime
 
+# Plugins
 # plugins:
 #   - social
+plugins:
+  - search
+  - blog
 
 extra:
   social:
@@ -56,8 +60,20 @@ markdown_extensions:
   - pymdownx.mark
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: |
   &copy; 2023 <a href="https://github.com/ob-man"  target="_blank" rel="noopener">ob-man</a>
+
+nav:
+  - Getting started:
+    - Home: index.md
+    - Test: test.md
+  - Pages:
+    - Page1: page1.md
+    - Page2: page2.md
+  - Test:    
+    - Test2: test2.md
+  - Blog:
+    - blog/index.md
