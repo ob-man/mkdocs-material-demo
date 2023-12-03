@@ -9,7 +9,7 @@ site_description: >-
 # Repository
 repo_name: ob-man/mkdocs-material-demo
 repo_url: https://github.com/ob-man/mkdocs-material-demo
-# edit_uri: https://github.com/ob-man/mkdocs-material-demo/main/docs
+edit_uri: ./edit/main/docs # https://github.com/ob-man/mkdocs-material-demo/main/docs
 
 copyright: |
   &copy; 2023 <a href="https://github.com/ob-man"  target="_blank" rel="noopener">ob-man</a>
