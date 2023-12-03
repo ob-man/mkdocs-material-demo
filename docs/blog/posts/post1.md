@@ -7,6 +7,7 @@ description: >
   Це перший пост у блозі
 categories:
   - General
+comments: true
 ---
 
 # Перший пост у блозі

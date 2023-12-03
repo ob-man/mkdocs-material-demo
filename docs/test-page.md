@@ -1,4 +1,10 @@
-# Test
+---
+icon: material/tooltip-plus
+status: new
+comments: true
+---
+
+# Test page
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 

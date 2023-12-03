@@ -1,80 +1,164 @@
+# Project information
 site_name: MkDocs Material Demo - !!!test site!!!
 site_url: https://ob-man.github.io/mkdocs-material-demo/
+site_author: Alex
+site_description: >-
+  Пишіть свою документацію в Markdown і створюйте професійний статичний сайт за лічені
+  хвилини - з можливістю пошуку, настроювання, на 60+ мовах, для всіх пристроїв
+
+# Repository
+repo_name: ob-man/mkdocs-material-demo
+repo_url: https://github.com/ob-man/mkdocs-material-demo
+edit_uri: https://github.com/ob-man/mkdocs-material-demo/main/docs
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/ob-man"  target="_blank" rel="noopener">ob-man</a>
 
 theme:
   name: material
   custom_dir: overrides
   features:
-    - navigation.tabs
-    - navigation.sections
-    #- toc.integrate
-    - navigation.top
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - content.code.annotation
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
     - content.code.copy
+    # - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tabs
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    #- toc.integrate
+  # icon:
+  #   repo: fontawesome/brands/github
   language: uk
   palette:
     # Перемикач палітри для світлого режиму
     - scheme: default
+      primary: indigo #red
+      accent: indigo #red
       toggle:
         icon: material/weather-night
         name: Переключити на темний режим
-      # primary: teal
-      # accent: purple
     # Перемикач палітри для темного режиму
     - scheme: slate
+      primary: black
+      accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Переключити на світлий режим
-      # primary: teal
-      # accent: lime
+  font:
+    text: Roboto
+    code: Roboto Mono
+  # favicon: assets/favicon.png
+  # icon:
+  #   logo: logo
 
 # Plugins
-# plugins:
-#   - social
 plugins:
-  - search
   - blog
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      # enable_creation_date: true
+      type: date #iso_date
 
+# # Hooks
+# hooks:
+#   - material/overrides/hooks/shortcodes.py
+#   - material/overrides/hooks/translations.py
+
+# Additional configuration
 extra:
+  annotate:
+    json: [.s2]
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
   social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/james-willett
+    - icon: fontawesome/brands/github
+      link: https://github.com/ob-man
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/TheJamesWillett
+      link: https://twitter.com
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/willettjames/
+      link: https://www.linkedin.com
+  version:
+    provider: mike
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - abbr
   - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
   - pymdownx.arithmatex:
       generic: true
-  - footnotes
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
   - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.mark
-  - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
-copyright: |
-  &copy; 2023 <a href="https://github.com/ob-man"  target="_blank" rel="noopener">ob-man</a>
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets #:
+      # auto_append:
+      #   - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 
 nav:
-  - Getting started:
-    - Home: index.md
-    - Test: test.md
+  - Головна: index.md
+  - Початок роботи:
+    - Ласкаво просимо до MkDocs: welcome-to-mkdocs.md
+    - Тестова сторінка: test-page.md
+    - Installation: getting-started.md
   - Pages:
-    - Page1: page1.md
-    - Page2: page2.md
-  - Test:    
-    - Test2: test2.md
-  - Blog:
+    - Page1: pages/page1.md
+    - Page2: pages/page2.md
+  - Блог:
     - blog/index.md
