@@ -16,7 +16,7 @@ copyright: |
 
 theme:
   name: material
-  custom_dir: overrides
+  custom_dir: docs/overrides
   features:
     - announce.dismiss
     - content.action.edit
@@ -78,7 +78,7 @@ plugins:
       minify_html: true
   - git-revision-date-localized:
       # enable_creation_date: true
-      type: date #iso_date
+      type: iso_date #date #iso_date
 
 # # Hooks
 # hooks:
@@ -135,7 +135,7 @@ markdown_extensions:
   - pymdownx.smartsymbols
   - pymdownx.snippets #:
       # auto_append:
-      #   - includes/mkdocs.md
+      #   - docs/includes/mkdocs.md
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
